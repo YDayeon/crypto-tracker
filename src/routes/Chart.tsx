@@ -77,11 +77,11 @@ function Chart({ coinId }: ChartProps) {
             fill: {
               type: 'gradient',
               gradient: {
-                gradientToColors: ['blue'],
+                gradientToColors: ['#fffa65'],
                 stops: [0, 100],
               },
             },
-            colors: ['red'],
+            colors: ['#7d5fff'],
             tooltip: {
               y: {
                 formatter: (value) => `${value.toFixed(2)}`,

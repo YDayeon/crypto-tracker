@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import { useQuery } from 'react-query';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -70,9 +70,11 @@ function Coins() {
   const { isLoading, data } = useQuery<ICoin[]>('allCoins', fetchCoins);
   return (
     <Container>
-      <Helmet>
-        <title>코인</title>
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title>코인</title>
+        </Helmet>
+      </HelmetProvider>
       <Header>
         <Title>코인</Title>
       </Header>

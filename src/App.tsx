@@ -68,7 +68,7 @@ function App() {
     <>
       <GlobalStyle />
       <Router />
-      <ReactQueryDevtools />
+      {/* <ReactQueryDevtools /> */}
     </>
   );
 }
